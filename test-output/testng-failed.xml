@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test1(failed)">
+    <parameter name="filename" value="facebooklog"/>
+    <parameter name="scrshot" value="facebook"/>
+    <parameter name="Sheetname" value="Sheet1"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="wbpath" value="D://Facebook.xlsx"/>
+    <parameter name="url" value="https://www.facebook.com/"/>
+    <parameter name="key" value="true"/>
+    <classes>
+      <class name="testcases.FacebookTest">
+        <methods>
+          <include name="closeReport"/>
+          <include name="closeWBConnection"/>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+          <include name="login"/>
+          <include name="openWBConnection"/>
+          <include name="generateLogReport"/>
+        </methods>
+      </class> <!-- testcases.FacebookTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="5" name="Test2(failed)">
+    <parameter name="filename" value="rmlog"/>
+    <parameter name="scrshot" value="rminfo"/>
+    <parameter name="Sheetname" value="Sheet1"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="wbpath" value="D://Facebook.xlsx"/>
+    <parameter name="url" value="http://www.rminfotechsolutions.com/videologinRMInfotech.php#loaded"/>
+    <parameter name="key" value="true"/>
+    <classes>
+      <class name="testcases.RMTest">
+        <methods>
+          <include name="closeReport"/>
+          <include name="closeWBConnection"/>
+          <include name="closeBrowser"/>
+          <include name="test"/>
+          <include name="openBrowser"/>
+          <include name="openWBConnection"/>
+          <include name="generateLogReport"/>
+        </methods>
+      </class> <!-- testcases.RMTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->

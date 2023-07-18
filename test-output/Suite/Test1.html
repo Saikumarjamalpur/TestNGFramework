@@ -1,0 +1,409 @@
+<html>
+<head>
+<title>TestNG:  Test1</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test1</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 18 12:48:45 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>27 seconds (27373 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.FacebookTest.openBrowser()'><b>openBrowser</b><br>Test class: testcases.FacebookTest<br>Parameters: chrome, https://www.facebook.com/, facebook</td>
+<td><div><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at core.Page.openBrowser(Page.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\HP\AppData\Local\Temp\selenium-manager2768537364702200337574027285799778\selenium-manager.exe, --browser, chrome, --output, json]
+error sending request for url (https://chromedriver.storage.googleapis.com/LATEST_RELEASE_114): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 37 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1589466857", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1589466857'><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at core.Page.openBrowser(Page.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:589)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\HP\AppData\Local\Temp\selenium-manager2768537364702200337574027285799778\selenium-manager.exe, --browser, chrome, --output, json]
+error sending request for url (https://chromedriver.storage.googleapis.com/LATEST_RELEASE_114): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 37 more
+</pre></div></td>
+<td>24</td>
+<td>testcases.FacebookTest@449a4f23</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.FacebookTest.openBrowser()'><b>openBrowser</b><br>Test class: testcases.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>testcases.FacebookTest@449a4f23</td></tr>
+<tr>
+<td title='testcases.FacebookTest.closeBrowser()'><b>closeBrowser</b><br>Test class: testcases.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>testcases.FacebookTest@449a4f23</td></tr>
+<tr>
+<td title='testcases.FacebookTest.closeWBConnection()'><b>closeWBConnection</b><br>Test class: testcases.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>testcases.FacebookTest@449a4f23</td></tr>
+<tr>
+<td title='testcases.FacebookTest.openBrowser()'><b>openBrowser</b><br>Test class: testcases.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>testcases.FacebookTest@449a4f23</td></tr>
+<tr>
+<td title='testcases.FacebookTest.closeBrowser()'><b>closeBrowser</b><br>Test class: testcases.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>testcases.FacebookTest@449a4f23</td></tr>
+<tr>
+<td title='testcases.FacebookTest.closeBrowser()'><b>closeBrowser</b><br>Test class: testcases.FacebookTest</td>
+<td></td>
+<td>0</td>
+<td>testcases.FacebookTest@449a4f23</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.FacebookTest.login()'><b>login</b><br>Test class: testcases.FacebookTest<br>Parameters: Raam, Ram108, </td>
+<td><div><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at core.Page.openBrowser(Page.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\HP\AppData\Local\Temp\selenium-manager2768537364702200337574027285799778\selenium-manager.exe, --browser, chrome, --output, json]
+error sending request for url (https://chromedriver.storage.googleapis.com/LATEST_RELEASE_114): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 37 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace533956291", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace533956291'><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at core.Page.openBrowser(Page.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:589)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\HP\AppData\Local\Temp\selenium-manager2768537364702200337574027285799778\selenium-manager.exe, --browser, chrome, --output, json]
+error sending request for url (https://chromedriver.storage.googleapis.com/LATEST_RELEASE_114): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 37 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FacebookTest@449a4f23</td></tr>
+<tr>
+<td title='testcases.FacebookTest.login()'><b>login</b><br>Test class: testcases.FacebookTest<br>Parameters: Sitha, Sitha108, </td>
+<td><div><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at core.Page.openBrowser(Page.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\HP\AppData\Local\Temp\selenium-manager2768537364702200337574027285799778\selenium-manager.exe, --browser, chrome, --output, json]
+error sending request for url (https://chromedriver.storage.googleapis.com/LATEST_RELEASE_114): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 37 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace269458366", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace269458366'><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at core.Page.openBrowser(Page.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:589)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\HP\AppData\Local\Temp\selenium-manager2768537364702200337574027285799778\selenium-manager.exe, --browser, chrome, --output, json]
+error sending request for url (https://chromedriver.storage.googleapis.com/LATEST_RELEASE_114): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 37 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FacebookTest@449a4f23</td></tr>
+<tr>
+<td title='testcases.FacebookTest.login()'><b>login</b><br>Test class: testcases.FacebookTest<br>Parameters: Sham, Sham108, </td>
+<td><div><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at core.Page.openBrowser(Page.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\HP\AppData\Local\Temp\selenium-manager2768537364702200337574027285799778\selenium-manager.exe, --browser, chrome, --output, json]
+error sending request for url (https://chromedriver.storage.googleapis.com/LATEST_RELEASE_114): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 37 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace220432328", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace220432328'><pre>org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at core.Page.openBrowser(Page.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:589)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [C:\Users\HP\AppData\Local\Temp\selenium-manager2768537364702200337574027285799778\selenium-manager.exe, --browser, chrome, --output, json]
+error sending request for url (https://chromedriver.storage.googleapis.com/LATEST_RELEASE_114): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 37 more
+</pre></div></td>
+<td>0</td>
+<td>testcases.FacebookTest@449a4f23</td></tr>
+</table><p>
+</body>
+</html>
